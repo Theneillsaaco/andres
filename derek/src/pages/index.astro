@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Perros">
+	<main class="min-h-screen bg-white">
+		<header class="py-8 px-4 text-center bg-gray-200">
+		    <img 
+				src="perrito.png" 
+				alt="Perrito"
+				class="w-32 h-32 mx-auto rounded-full" 
+			/>
+			<h1 class="text-4xl font-bold text-black">
+				Mis Perros
+			</h1>
+			<p class="mt-2">
+				Compañeros de cuatro patas
+			</p>
+		</header>
+
+		<article class="max-w-2xl mx-auto py-8 px-4">
+			<section class="mb-8">
+				<h2 class="text-2xl font-semibold text-black mb-4">¿Por qué tener un perro?</h2>
+				<p class="leading-relaxed">
+					Los perros son excelentes compañía. Brindan amistad incondicional, alegría diaria y motivación para hacer ejercicio.
+				</p>
+			</section>
+
+			<section class="mb-8">
+				<h2 class="text-2xl font-semibold text-black mb-4">Beneficios</h2>
+				<ul class="list-disc list-inside space-y-2">
+					<li>
+						Reducen el estrés y la ansiedad
+					</li>
+					<li>
+						Incrementan la actividad física
+					</li>
+					<li>
+						Brindan compañía y seguridad
+					</li>
+					<li>
+						Mejoran la socialización
+					</li>
+				</ul>
+			</section>
+
+			<section class="mb-8">
+				<h2 class="text-2xl font-semibold text-black mb-4">Razas populares</h2>
+				<div class="grid gap-4">
+					<article class="p-4 bg-gray-200 rounded-lg">
+						<h3 class="text-lg font-medium text-black">Golden Retriever</h3>
+						<p class="text-gray-700">Amigables, leales y perfectos para familias.</p>
+					</article>
+					<article class="p-4 bg-gray-200 rounded-lg">
+						<h3 class="text-lg font-medium text-black">Labrador</h3>
+						<p class="text-gray-700">Inteligente y lleno de energía.</p>
+					</article>
+					<article class="p-4 bg-gray-200 rounded-lg">
+						<h3 class="text-lg font-medium text-black">Bulldog Francés</h3>
+						<p class="text-gray-700">Cariñoso y excelente para departamentos.</p>
+					</article>
+				</div>
+			</section>
+		</article>
+
+		<footer class="py-6 px-4 text-center bg-gray-200">
+			<p class="text-gray-700 text-sm">© 2026 - Amantes de los perros</p>
+		</footer>
+	</main>
+</Layout>

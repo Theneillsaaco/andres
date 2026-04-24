@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mi Página">
+  <header class="flex items-center justify-between px-6 py-4 bg-surface-container rounded-b-3xl">
+    <h1 class="text-2xl font-medium text-on-surface">Karime</h1>
+    <nav>
+      <ul class="flex gap-4">
+        <li><a href="#" class="px-4 py-2 text-on-surfaceVariant hover:text-on-surface rounded-full hover:bg-surface-container-hover transition">Inicio</a></li>
+        <li><a href="#" class="px-4 py-2 text-on-surfaceVariant hover:text-on-surface rounded-full hover:bg-surface-container-hover transition">Acerca</a></li>
+        <li><a href="#" class="px-4 py-2 text-on-surfaceVariant hover:text-on-surface rounded-full hover:bg-surface-container-hover transition">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <section class="bg-surface-container-low rounded-3xl p-8 shadow-lg mb-8">
+      <h2 class="text-3xl font-normal text-on-surface mb-4">Bienvenido</h2>
+      <p class="text-lg text-on-surfaceVariant leading-relaxed">
+        Esta es una página simple con diseño moderno y elegante.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-surface-container p-6 rounded-2xl">
+        <h3 class="text-xl text-on-surface mb-2">Misión</h3>
+        <p class="text-on-surfaceVariant">Brindar soluciones innovadoras que mejoren la experiencia digital.</p>
+      </div>
+      <div class="bg-surface-container p-6 rounded-2xl">
+        <h3 class="text-xl text-on-surface mb-2">Visión</h3>
+        <p class="text-on-surfaceVariant">Ser líderes en tecnología y diseño centrado en el usuario.</p>
+      </div>
+    </section>
+
+    <section class="bg-surface-container-low rounded-3xl p-8 shadow-lg mb-8">
+      <h2 class="text-2xl font-normal text-on-surface mb-4">Nuestros Servicios</h2>
+      <ul class="space-y-3 text-on-surfaceVariant">
+        <li class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-primary rounded-full"></span>
+          Desarrollo web
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-primary rounded-full"></span>
+          Diseño UI/UX
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-primary rounded-full"></span>
+          Consultoría técnica
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-on-surfaceVariant">
+    <p>© 2026 Karime</p>
+  </footer>
+</Layout>

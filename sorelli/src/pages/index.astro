@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<header class="sticky top-0 z-50 bg-[var(--md-sys-color-surface)] border-b border-[var(--md-sys-color-outline-variant)]">
+		<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+			<a href="/" class="text-xl font-bold text-[var(--md-sys-color-primary)] no-underline">
+			    MiSitio
+			</a>
+			<ul class="flex gap-6 sm:gap-8 list-none m-0 p-0">
+				<li>
+					<a href="#inicio" class="no-underline text-[var(--md-sys-color-on-surface)] font-medium px-2 py-1 rounded-[var(--md-sys-shape-corner-medium)] hover:bg-[var(--md-sys-color-surface-container-high)] transition-colors">Inicio</a>
+				</li>
+				<li>
+					<a href="#acerca" class="no-underline text-[var(--md-sys-color-on-surface)] font-medium px-2 py-1 rounded-[var(--md-sys-shape-corner-medium)] hover:bg-[var(--md-sys-color-surface-container-high)] transition-colors">Acerca</a>
+				</li>
+				<li>
+					<a href="#servicios" class="no-underline text-[var(--md-sys-color-on-surface)] font-medium px-2 py-1 rounded-[var(--md-sys-shape-corner-medium)] hover:bg-[var(--md-sys-color-surface-container-high)] transition-colors">Servicios</a>
+				</li>
+				<li>
+					<a href="#contacto" class="no-underline text-[var(--md-sys-color-on-surface)] font-medium px-2 py-1 rounded-[var(--md-sys-shape-corner-medium)] hover:bg-[var(--md-sys-color-surface-container-high)] transition-colors">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="inicio" class="text-center py-16 sm:py-24 bg-[var(--md-sys-color-surface-container-low)]">
+			<h1 class="text-4xl sm:text-5xl font-bold text-[var(--md-sys-color-on-surface)] mb-4">
+			    Bienvenido a MiSitio
+			</h1>
+			<p class="text-lg text-[var(--md-sys-color-on-surface-variant)]">
+			    Creamos experiencias digitales extraordinarias
+			</p>
+		</section>
+
+		<section id="acerca" class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+			<article class="bg-[var(--md-sys-color-surface-container-high)] rounded-[var(--md-sys-shape-corner-large)] p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+				<h2 class="text-2xl font-semibold text-[var(--md-sys-color-on-surface)] mb-4">
+				    Acerca de Nosotros</h2>
+				<p class="text-[var(--md-sys-color-on-surface-variant)] leading-relaxed m-0">
+				    Somos un equipo apasionado por crear soluciones digitales innovadoras que impulsan el éxito de nuestros clientes.
+				</p>
+			</article>
+		</section>
+
+		<section id="servicios" class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+			<h2 class="text-2xl font-semibold text-[var(--md-sys-color-on-surface)] text-center mb-8">Nuestros Servicios</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<article class="bg-[var(--md-sys-color-surface-container-high)] rounded-[var(--md-sys-shape-corner-large)] p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+					<h3 class="text-xl font-medium text-[var(--md-sys-color-on-surface)] mb-3">
+					    Desarrollo Web
+					</h3>
+					<p class="text-[var(--md-sys-color-on-surface-variant)] m-0 leading-relaxed">
+					    Creamos sitios web modernos y responsive con las últimas tecnologías.
+					</p>
+				</article>
+				<article class="bg-[var(--md-sys-color-surface-container-high)] rounded-[var(--md-sys-shape-corner-large)] p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+					<h3 class="text-xl font-medium text-[var(--md-sys-color-on-surface)] mb-3">
+					    Diseño UI/UX
+					</h3>
+					<p class="text-[var(--md-sys-color-on-surface-variant)] m-0 leading-relaxed">
+					    Diseñamos interfaces intuitivas y experiencias de usuario memorables.
+					</p>
+				</article>
+				<article class="bg-[var(--md-sys-color-surface-container-high)] rounded-[var(--md-sys-shape-corner-large)] p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+					<h3 class="text-xl font-medium text-[var(--md-sys-color-on-surface)] mb-3">
+					    Consultoría Tech
+					</h3>
+					<p class="text-[var(--md-sys-color-on-surface-variant)] m-0 leading-relaxed">
+					    Asesoramos tu proyecto tecnológico para lograr tus objetivos de negocio.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="contacto" class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+			<article class="bg-[var(--md-sys-color-surface-container-high)] rounded-[var(--md-sys-shape-corner-large)] p-8 text-center max-w-xl mx-auto">
+				<h2 class="text-2xl font-semibold text-[var(--md-sys-color-on-surface)] mb-4">
+				    Contacto
+				</h2>
+				<p class="text-[var(--md-sys-color-on-surface-variant)]">
+				    ¿Listo para empezar un proyecto? Escríbenos.
+				</p>
+				<a href="mailto:hola@misitio.com" class="inline-block mt-6 px-6 py-3 bg-[var(--md-sys-color-primary)] text-[var(--md-sys-color-on-primary)] no-underline rounded-full font-semibold hover:bg-[var(--md-sys-color-primary-container)] hover:text-[var(--md-sys-color-on-primary-container)] transition-colors">Enviar Mensaje</a>
+			</article>
+		</section>
+	</main>
+
+	<footer class="bg-[var(--md-sys-color-surface-container)] py-8 text-center">
+		<p class="text-[var(--md-sys-color-on-surface-variant)] m-0">&copy; 2026 MiSitio. Todos los derechos reservados.</p>
+	</footer>
+</Layout>

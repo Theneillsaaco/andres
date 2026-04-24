@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: oklch(0.98 0 250);
+  --color-surface-container: oklch(0.92 0.01 264);
+  --color-surface-container-low: oklch(0.94 0.01 264);
+  --color-surface-container-hover: oklch(0.88 0.01 264);
+  --color-on-surface: oklch(0.2 0 280);
+  --color-on-surfaceVariant: oklch(0.55 0.02 280);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; }
