@@ -3,17 +3,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Perros">
-	<main class="min-h-screen bg-white">
+	<main class="min-h-screen bg-blue">
 		<header class="py-8 px-4 text-center bg-gray-200">
 		    <img 
 				src="perrito.png" 
 				alt="Perrito"
-				class="w-32 h-32 mx-auto rounded-full" 
+				class="w-32 h-32 mx-auto rounded-full animate-bounce" 
 			/>
-			<h1 class="text-4xl font-bold text-black">
+			<h1 class="text-4xl font-bold text-black mt-4 animate-fade-in">
 				Mis Perros
 			</h1>
-			<p class="mt-2">
+			<p class="mt-2 animate-fade-in-delay">
 				Compañeros de cuatro patas
 			</p>
 		</header>
@@ -29,16 +29,16 @@ import Layout from '../layouts/Layout.astro';
 			<section class="mb-8">
 				<h2 class="text-2xl font-semibold text-black mb-4">Beneficios</h2>
 				<ul class="list-disc list-inside space-y-2">
-					<li>
+					<li class="hover:translate-x-2 transition-transform cursor-pointer">
 						Reducen el estrés y la ansiedad
 					</li>
-					<li>
+					<li class="hover:translate-x-2 transition-transform cursor-pointer">
 						Incrementan la actividad física
 					</li>
-					<li>
+					<li class="hover:translate-x-2 transition-transform cursor-pointer">
 						Brindan compañía y seguridad
 					</li>
-					<li>
+					<li class="hover:translate-x-2 transition-transform cursor-pointer">
 						Mejoran la socialización
 					</li>
 				</ul>
@@ -47,20 +47,24 @@ import Layout from '../layouts/Layout.astro';
 			<section class="mb-8">
 				<h2 class="text-2xl font-semibold text-black mb-4">Razas populares</h2>
 				<div class="grid gap-4">
-					<article class="p-4 bg-gray-200 rounded-lg">
+					<article class="p-4 bg-gray-200 rounded-lg hover:scale-105 hover:shadow-xl transition-all cursor-pointer animate-slide-up">
 						<h3 class="text-lg font-medium text-black">Golden Retriever</h3>
 						<p class="text-gray-700">Amigables, leales y perfectos para familias.</p>
 					</article>
-					<article class="p-4 bg-gray-200 rounded-lg">
+					<article class="p-4 bg-gray-200 rounded-lg hover:scale-105 hover:shadow-xl transition-all cursor-pointer animate-slide-up-delay-1">
 						<h3 class="text-lg font-medium text-black">Labrador</h3>
 						<p class="text-gray-700">Inteligente y lleno de energía.</p>
 					</article>
-					<article class="p-4 bg-gray-200 rounded-lg">
+					<article class="p-4 bg-gray-200 rounded-lg hover:scale-105 hover:shadow-xl transition-all cursor-pointer animate-slide-up-delay-2">
 						<h3 class="text-lg font-medium text-black">Bulldog Francés</h3>
 						<p class="text-gray-700">Cariñoso y excelente para departamentos.</p>
 					</article>
 				</div>
 			</section>
+
+			<button id="likeBtn" class="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
+				<span id="likeCount">0</span> Likes
+			</button>
 		</article>
 
 		<footer class="py-6 px-4 text-center bg-gray-200">
@@ -68,3 +72,46 @@ import Layout from '../layouts/Layout.astro';
 		</footer>
 	</main>
 </Layout>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; transform: translateY(-20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes slide-up {
+		from { opacity: 0; transform: translateY(30px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	.animate-fade-in {
+		animation: fade-in 0.6s ease-out forwards;
+	}
+	.animate-fade-in-delay {
+		opacity: 0;
+		animation: fade-in 0.6s ease-out 0.3s forwards;
+	}
+	.animate-slide-up {
+		opacity: 0;
+		animation: slide-up 0.5s ease-out 0.4s forwards;
+	}
+	.animate-slide-up-delay-1 {
+		opacity: 0;
+		animation: slide-up 0.5s ease-out 0.5s forwards;
+	}
+	.animate-slide-up-delay-2 {
+		opacity: 0;
+		animation: slide-up 0.5s ease-out 0.6s forwards;
+	}
+</style>
+
+<script>
+	let likes = 0;
+	const btn = document.getElementById('likeBtn');
+	const count = document.getElementById('likeCount');
+	
+	btn?.addEventListener('click', () => {
+		likes++;
+		count!.textContent = likes.toString();
+		btn.classList.add('scale-110');
+		setTimeout(() => btn.classList.remove('scale-110'), 150);
+	});
+</script>
